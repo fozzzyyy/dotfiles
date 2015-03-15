@@ -34,7 +34,7 @@
 
 URxvt.font: xft:DejaVu Sans Mono:size=10
 URxvt.letterSpace: -2.5
-Xft.dpi: 100
+Xft.dpi: 94
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
