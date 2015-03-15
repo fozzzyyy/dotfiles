@@ -31,7 +31,7 @@ setup_dotfile() {
 		mv ~/.$1 $backup_dir/$1
 	fi
 	ln -s $dotfiles/$1 ~/.$1
-	echo "* Linked $dotfiles/$1 to ~/.$1\n"
+	echo "* Linked $dotfiles/$1 to ~/.$1"
 }
 
 setup_non_dotfile() {
