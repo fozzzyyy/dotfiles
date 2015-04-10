@@ -52,7 +52,7 @@ setup_non_dotfile() {
 	echo "* Linked $dotfiles/$1 to ~/.$1\n"
 }
 
-for dotfile in vimrc bashrc bash_profile compton.conf gitconfig gtkrc-2.0 install.sh vimrc xinitrc Xresources i3 icons ssh vim; do
+for dotfile in vimrc bashrc bash_profile compton.conf gitconfig gtkrc-2.0 vimrc xinitrc Xresources i3 icons ssh vim; do
 	setup_dotfile $dotfile
 done
 

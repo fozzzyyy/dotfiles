@@ -27,35 +27,21 @@ background =	"#556270"
 status = Status(standalone=True)
 
 status.register("clock",
-    format="%a %-d %b %X",)
+        format="%a %-d %b %X",)
 
 status.register("cpu_usage",
         format="CPU: {usage}%",)
 
-status.register("battery",
-    format="{status} {percentage:.0f}% {remaining:%E%hh:%Mm}",
-    alert=True,
-    alert_percentage=5,
-    color=white,
-    critical_color=red,
-    charging_color=yellow,
-    full_color=white,
-    status={
-        "DIS": "DIS",
-        "CHR": "CHR",
-        "FULL": "FUL",
-    },)
-
 status.register("network",
-    interface="enp0s25",
-    color_up=white,
-    color_down=red,
-    format_up="{v4cidr}",
-    format_down="")
+        interface="enp3s0",
+        color_up=white,
+        color_down=red,
+        format_up="{v4cidr}",
+        format_down="")
 
 status.register("pulseaudio",
-    format="VOL {volume}%",
-    color_muted=red,
-    color_unmuted=white,)
+        format="VOL {volume}%",
+        color_muted=red,
+        color_unmuted=white,)
 
 status.run()

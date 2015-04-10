@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+setxkbmap gb
+
 alias ls='ls --color=auto'
 alias sudo='sudo '
 alias emacs='emacs -nw'
