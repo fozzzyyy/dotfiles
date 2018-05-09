@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/fozzy/.i3'
 let g:netrw_dirhist_2='/etc/pacman.d'
 let g:netrw_dirhist_3='/home/fozzy/.gnupg'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/home/fozzy/.i3'
 let g:netrw_dirhist_6='/home/fozzy/.config/xfce4'
 let g:netrw_dirhist_7='/home/fozzy/gtk-3.0'
 let g:netrw_dirhist_8='/home/fozzy/.i3'
+let g:netrw_dirhist_9='/home/fozzy/dotfiles/vim/autoload/pathogen.vim'

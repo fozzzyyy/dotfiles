@@ -27,7 +27,18 @@ background =	"#556270"
 status = Status(standalone=True)
 
 status.register("clock",
-        format="%a %-d %b %X",)
+        format="%a %-d %b %Y %X",)
+
+status.register("battery",
+        format="Battery{status} {percentage_design:.2f}% {remaining:%E%hhr%Mmin}",
+        alert=True,
+        alert_percentage=20,
+        status={
+            "DIS":"",
+            "CHR":" Charging:",
+            "FULL":" Fully charged:"
+        }
+        )
 
 status.register("cpu_usage",
         format="CPU: {usage}%",)

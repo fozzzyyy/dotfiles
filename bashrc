@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-setxkbmap gb
+setxkbmap -layout gb,us
+setxkbmap -option 'grp:alt_shift_toggle'
 
 alias ls='ls --color=auto'
 alias sudo='sudo '
@@ -15,3 +16,5 @@ PS1="\[\e[00;37m\]\u \[\e[0m\]\[\e[01;36m\]\w\[\e[0m\]\[\e[00;37m\] \\$ \[\e[0m\
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/fozzy/.vimpkg/bin

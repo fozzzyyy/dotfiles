@@ -2,23 +2,29 @@ syntax on
 set nocompatible
 
 set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
+"execute pathogen#infect()
+call vundle#begin()
 
-"Plugin 'gmarik/Vundle.vim'
-"Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'scrooloose/nerdtree'
-"Bundle 'Valloric/YouCompleteMe'
-"Bundle 'davidhalter/jedi-vim'
+Plugin 'VundleVim/Vundle.vim'
+Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'davidhalter/jedi-vim'
+Plugin 'ervandew/supertab'
+Plugin 'ryanoasis/vim-devicons'
 
-"call vundle#end()
-"filetype plugin indent on
+call vundle#end()
+filetype plugin indent on
 
 "NerdTree
-"map <F2> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
 
 "YCM
-"let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+
+"Devicons
+set encoding=UTF-8
 
 filetype plugin indent on
 set number
@@ -29,11 +35,11 @@ set laststatus=2
 "set noexpandtab
 set foldmethod=syntax
 set cursorline
-highlight OverLength ctermbg=1 ctermfg=white
-match OverLength /\%81v.\+/
+"highlight OverLength ctermbg=1 ctermfg=white
+"match OverLength /\%81v.\+/
 
-"set colorcolumn=81
-"highlight colorcolumn ctermbg=8
+set colorcolumn=81
+highlight colorcolumn ctermbg=8
 
 nnoremap <F4> :call TabWidthToggle()<cr>
 
@@ -80,3 +86,4 @@ augroup END
 
 nnoremap ; :
 nnoremap : :
+call pathogen#helptags()
