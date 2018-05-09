@@ -41,6 +41,7 @@ set cursorline
 
 set colorcolumn=81
 highlight colorcolumn ctermbg=8
+colorscheme monokai
 
 nnoremap <F4> :call TabWidthToggle()<cr>
 
