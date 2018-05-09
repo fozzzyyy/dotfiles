@@ -13,6 +13,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'tiagfumo/vim-nerdtree-sntax-highlight'
 
 call vundle#end()
 filetype plugin indent on
