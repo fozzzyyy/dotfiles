@@ -39,7 +39,7 @@ set cursorline
 "highlight OverLength ctermbg=1 ctermfg=white
 "match OverLength /\%81v.\+/
 
-set colorcolumn=81
+set colorcolumn=121
 highlight colorcolumn ctermbg=8
 colorscheme monokai
 
