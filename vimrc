@@ -10,7 +10,7 @@ Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'davidhalter/jedi-vim'
+"Bundle 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -35,6 +35,7 @@ set laststatus=2
 "set shiftwidth=4
 "set noexpandtab
 set foldmethod=syntax
+set foldlevel=99
 set cursorline
 "highlight OverLength ctermbg=1 ctermfg=white
 "match OverLength /\%81v.\+/
@@ -44,6 +45,7 @@ highlight colorcolumn ctermbg=8
 colorscheme monokai
 
 nnoremap <F4> :call TabWidthToggle()<cr>
+nnoremap <F5> :call WrapToggle()<cr>
 
 function! TabWidthToggle()
 	if &tabstop == 4
@@ -54,6 +56,14 @@ function! TabWidthToggle()
 		setlocal tabstop=4
 		setlocal softtabstop=4
 		setlocal shiftwidth=4
+	endif
+endfunction
+
+function! WrapToggle()
+	if &wrap == 1
+		set nowrap
+	else
+		set wrap
 	endif
 endfunction
 
@@ -88,4 +98,7 @@ augroup END
 
 nnoremap ; :
 nnoremap : :
-call pathogen#helptags()
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>

@@ -6,9 +6,10 @@
 #
 
 #exec compton --config ~/.compton.conf -b
-exec feh --bg-scale /home/fozzy/Pictures/Wallpapers/Imagine_Dragons_Believer_AMOLED.png
+exec_always feh --bg-scale /home/fozzy/Pictures/Wallpapers/colour_burst.png
 exec urxvrtd -q -f -o
 exec_always synclient VertScrollDelta=-99 synclient HorizScrollDelta=-79 synclient HorizTwoFingerScroll=1
+exec_always syndaemon -i 0.5 -K -R 
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
