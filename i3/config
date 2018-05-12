@@ -5,11 +5,11 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-#exec compton --config ~/.compton.conf -b
+exec compton --config ~/.compton.conf -b
 exec_always feh --bg-scale /home/fozzy/Pictures/Wallpapers/colour_burst.png
 exec urxvrtd -q -f -o
 exec_always synclient VertScrollDelta=-99 synclient HorizScrollDelta=-79 synclient HorizTwoFingerScroll=1
-exec_always syndaemon -i 0.5 -K -R 
+exec syndaemon -i 0.5 -K -R 
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -26,13 +26,13 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-set $default_gaps_inner 25
+set $default_gaps_inner 10
 set $default_gaps_outer 0
 
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 for_window [class="^.*"] border pixel 0
-for_window [class="(?i)urxvt"] border pixel 3
+for_window [class="(?i)urxvt"] border pixel 5
 
 exec discord
 assign [class="discord"] $ws10
