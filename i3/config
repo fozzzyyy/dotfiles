@@ -34,7 +34,6 @@ gaps outer $default_gaps_outer
 for_window [class="^.*"] border pixel 0
 for_window [class="(?i)urxvt"] border pixel 5
 
-exec discord
 assign [class="discord"] $ws10
 
 set $black        "#292929"

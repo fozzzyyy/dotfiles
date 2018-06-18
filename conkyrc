@@ -20,7 +20,11 @@ conky.config = {
 	  {"full_text": "<span foreground='\#0d5173' background='\#1271a1'></span><span background='\#0d5173'>${hwmon temp 1}°C </span>",
 	  "markup": "pango", "separator":false, "separator_block_width":0},
 	  # Network
+          ${if_existing /sys/class/net/enp0s25/operstate up}
+	  {"full_text": "<span background='\#0d7373'><span background='\#0d5173' foreground='\#0d7373'></span> Ethernet ↓${downspeed enp0s25}/s   ↑${upspeed enp0s25}/s </span><span background='\#0d7373' foreground='\#1283a2'></span>", "markup": "pango", "separator":false, "separator_block_width": 0},
+          ${else}
 	  {"full_text": "<span background='\#0d7373'><span background='\#0d5173' foreground='\#0d7373'></span>    ${wireless_essid wlan0} ↓${downspeed wlan0}/s   ↑${upspeed wlan0}/s </span><span background='\#0d7373' foreground='\#1283a2'></span>", "markup": "pango", "separator":false, "separator_block_width": 0},
+          ${endif}
 	  # Battery:
 	  {"full_text": "<span background='\#1283a2' foreground='\#1283a2'></span><span background='\#1283a2'>🔋 $battery | $battery_time </span><span background='\#1283a2' foreground='\#0d4073'></span>",
 	  "separator": false, "separator_block_width": 0, "markup": "pango"},
