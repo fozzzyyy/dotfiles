@@ -68,16 +68,18 @@ function! WrapToggle()
 endfunction
 
 " use real tabs for these languages
-autocmd FileType c,cpp,java
+autocmd FileType c,cpp
 			\ setlocal noexpandtab
 
 " use two spaces for these languages
 autocmd FileType ruby 
+			\ setlocal expandtab |
 			\ setlocal tabstop=2 |
 			\ setlocal shiftwidth=2
 
 " use four spaces for these languages
-autocmd FileType css,python,sh
+autocmd FileType css,python,sh,java
+			\ setlocal expandtab |
 			\ setlocal tabstop=4 |
 			\ setlocal shiftwidth=4
 
@@ -102,3 +104,5 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+"imap { {}<left>
+inoremap {<cr> {<cr>}<c-o>O<tab>

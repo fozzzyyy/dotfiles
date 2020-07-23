@@ -32,7 +32,7 @@ conky.config = {
 	  {"full_text": "<span background='\#1793d1' foreground='\#0d4073'></span><span background='\#0d4073'>    ${time %a %d %b %G} </span><span background='\#0d4073' foreground='\#082645'></span>",
 	  "separator": false, "separator_block_width": 0, "markup": "pango"},
 	  # Time:
-	  {"full_text":"<span background='\#082645'>  ${time %k:%M:%S} </span>","separator":false, "separator_block_width":0, "markup": "pango" }
+	  {"full_text":"<span background='\#082645'>  ${time %H:%M:%S} </span>","separator":false, "separator_block_width":0, "markup": "pango" }
 	  #{"full_text": "<span foreground='\#082645'>\ue0bc</span>", "markup": "pango", "separator": false, "separator_block_width": 0}
   ],
   ]]
