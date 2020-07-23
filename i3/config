@@ -6,11 +6,12 @@
 #
 
 exec compton --config ~/.compton.conf -b
-exec_always feh --bg-scale /home/fozzy/Pictures/Wallpapers/colour_burst.png
+exec_always feh --bg-fill /home/fozzy/Pictures/Wallpapers/fractal.png
 exec urxvrtd -q -f -o
 exec_always synclient VertScrollDelta=-99 synclient HorizScrollDelta=-79 synclient HorizTwoFingerScroll=1
 exec syndaemon -i 0.5 -K -R 
 exec --no-startup-id nm-applet --sm-disable
+#exec_always redshift -l 55:-5
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
