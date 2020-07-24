@@ -6,10 +6,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Valloric/YouCompleteMe'
 "Bundle 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'ryanoasis/vim-devicons'
